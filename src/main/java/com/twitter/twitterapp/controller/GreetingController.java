@@ -1,4 +1,4 @@
-package com.twitter.twitterapp.Controller;
+package com.twitter.twitterapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +13,12 @@ public class GreetingController {
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Map<String,Object> model) {
         model.put("name", name);
         return "greeting";
+    }
+
+    @GetMapping
+    public String main(Map<String, Object> model){
+        model.put("some","hello, dear!");
+        return "main";
     }
 
 }
