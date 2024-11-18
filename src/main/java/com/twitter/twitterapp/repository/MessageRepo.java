@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 @EnableJpaRepositories(basePackages = "com.twitter.twitterapp.repository")
 public interface MessageRepo extends JpaRepository<Message, Long> {
-
     List<Message> findByTag(String tag);
-
 }
+
+
